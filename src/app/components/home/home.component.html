@@ -1,0 +1,23 @@
+<section class="container my-4">
+  <h1 class="mb-3">{{ titulo }}</h1>
+  <p class="lead">{{ descricao }}</p>
+
+  @if (mostrarInformacoes) {
+    <div class="mb-4 p-3 border rounded bg-light">
+      <h2>Data do Evento: {{ dataEvento }}</h2>
+
+      @if (inscricoesAbertas) {
+        <p  class="text-success">Inscrições abertas!</p>
+      } @else {
+        <p  class="text-danger">Inscrições encerradas</p>
+      }
+    </div>
+  }
+
+  <h3>Destaques:</h3>
+  <ul class="list-group list-group-flush">
+    @for (destaque of destaques; track destaque) {
+      <li class="list-group-item">{{ destaque }}</li>
+    }
+  </ul>
+</section>

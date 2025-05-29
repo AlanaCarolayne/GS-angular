@@ -1,0 +1,21 @@
+
+  <div class="d-flex flex-wrap justify-content-center gap-3">
+    <div class="row align-items-center justify-content-center">
+
+      <div class=" text-center text-md-start justify-content-center align-items-center d-flex">
+        <h1 class="display-5 fw-bold lh-base">
+          CONTE COM GRANDES EMPRESAS<br />
+          PARA O DESENVOLVIMENTO<br />
+          DAS SUAS SOLUÇÕES CRIATIVAS<br />
+          E TECNOLÓGICAS
+        </h1>
+      </div>
+    @for (parceiro of parceiros; track $index) {
+      <div class="parceiro" class="d-flex justify-content-center align-items-center  p-2 mx-3 my-4 bg-white rounded" style="width: 160px; height: 100px;">
+        <img
+          [src]="parceiro.logo"
+          [alt]="'Logo da ' + parceiro.nome + ' - ' + parceiro.descricao"  class="img-fluid" style="max-height: 100%; max-width: 100%; object-fit: contain;" />
+
+      </div>
+    }
+</div>

@@ -1,0 +1,16 @@
+<div class="evento-card card shadow-sm p-2 rounded h-100 d-flex flex-column justify-content-between" >
+  <h3 class="card-title">{{ titulo }}</h3>
+  <div class="info mb-3">
+    <p><strong>Data:</strong> {{ data }}</p>
+    <p><strong>Horário:</strong> {{ horario }}</p>
+    <p><strong>Local:</strong> {{ local }}</p>
+  </div>
+
+  <button (click)="participar()" [disabled]="inscrito"  class="btn btn-primary">
+    {{ inscrito ? 'Inscrito' : 'Participar' }}
+  </button>
+
+  @if (inscrito) {
+    <p  class="mensagem mt-2 text-success">{{ mensagemInscricao }}</p>
+  }
+</div>
